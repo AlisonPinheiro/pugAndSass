@@ -5,8 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pug = {
     test: /\.pug$/,
-    use: ['html-loader?attrs=false', 'pug-html-loader']
+    loader: "pug-loader",
+    options: {
+      pretty: true
+    }
   };
+  
 
   const config = {
     entry: './src/js/app.js',

@@ -16,5 +16,8 @@
     "pug-html-loader": "^1.1.5",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "pug-loader": "^2.4.0"
   }
 }

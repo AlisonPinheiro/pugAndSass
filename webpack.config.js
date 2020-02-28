@@ -1,8 +1,13 @@
 /* webpack.config.js */
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const pjson = require('./package.json');
 const fs = require('fs')
+
+const nVersion = `${pjson.version}`;
+const nProject = `${pjson.name}`
+
 
 function generateHtmlPlugins (templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
@@ -20,14 +25,13 @@ function generateHtmlPlugins (templateDir) {
 const htmlPlugins = generateHtmlPlugins('./src/pug/pages')
 
 module.exports = {
-  entry: './src/app.js',
+  entry: [ './src/css/index.scss'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/app.js'
+    filename: `js/${nProject}-${nVersion}.min.js`
   },
   module: {
     rules: [
-      
       {
         test: /\.pug$/,
         loader: 'pug-loader',
@@ -38,16 +42,22 @@ module.exports = {
 
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-        })
-      }
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader }, 
+          'css-loader', 
+          'sass-loader'
+        ],
+      },
     ]
   },
   plugins: [
-    // Extract our css to a separate css file
-    new ExtractTextPlugin('css/styles.css')
+    new MiniCssExtractPlugin({
+      filename: `css/${nProject}-${nVersion}.min.css`,
+    }),
   ]
   // We join our htmlPlugin array to the end
   // of our webpack plugins array.

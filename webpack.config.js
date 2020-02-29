@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const pjson = require('./package.json');
 const fs = require('fs')
+const CopyPlugin = require('copy-webpack-plugin');
 
 const nVersion = `${pjson.version}`;
 const nProject = `${pjson.name}`
@@ -58,6 +59,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `css/${nProject}-${nVersion}.min.css`,
     }),
+    new CopyPlugin([
+      { from: './public/files', to: './files' },
+    ]),
   ]
   // We join our htmlPlugin array to the end
   // of our webpack plugins array.

@@ -1,0 +1,27 @@
+.home{
+	.banner-tv{
+		.box-text{
+			.big-title{
+				font-size: 48px;
+				color: #ffffff;
+				font-weight: 700;
+				line-height: 62px;
+				margin-bottom: 25px;
+				span{
+					color: #84ebad;
+				}
+			}
+		}
+		.box-img{
+			max-width: 640px;
+		}
+		.box-text,
+		.box-img{
+			width: 50%;
+		}
+	}
+	.banner-simple{
+		position: relative;
+		padding-top: 100px;
+	}
+}

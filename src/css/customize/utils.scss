@@ -1,0 +1,53 @@
+section{
+	padding: $s-lg 0;
+}
+
+
+.colapse{
+	display: none;
+}
+
+.grid{
+	display: flex;
+	align-items: center;
+	&--space{
+		justify-content: space-between;
+	}
+		
+}
+
+//title from box
+
+.title-box{
+	font-size: 24px;
+	font-weight: 700;
+	color: $c-black;
+	&--nosubtitle{
+		&::after{
+			content: "";
+			position: absolute;
+			width: 156px;
+			height: 2px;
+			background-color: $c-gray-light;
+			left: 50%;
+			margin-left: -78px;
+			bottom: -15px;
+		}
+	}
+}
+.subtitle-box{
+	font-size: 20px;
+	font-weight: 400;
+	color: $c-gray;
+	position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		width: 156px;
+		height: 2px;
+		background-color: $c-gray-light;
+		left: 50%;
+		margin-left: -78px;
+		bottom: -15px;
+	}
+}

@@ -1,4 +1,7 @@
 header
-  img.logo(src="/files/logo.png", alt="")/
-
-  include ./subparts/menu.pug
+  //- .bg-animation
+  .container
+    nav.navbar.grid.grid--space
+      a.logo-holder(href="index.html")
+        img.logo(src="/files/logo-white.png", alt="")/
+      include ./subparts/menu.pug

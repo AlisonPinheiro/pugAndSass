@@ -9,6 +9,8 @@ html {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   &.js-noscroll{//TODO: fix noscroll
     // overflow-y: hidden;
     // body{
@@ -29,17 +31,69 @@ body {
   min-height: 100%;
   min-width: 320px;
   overflow-x: hidden;
+
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body > main{
   position: relative;
   min-height: 100vh;
-  margin-top: $header-height-mobile;
+  // margin-top: $header-height-mobile;
   @media screen and (min-width: 1025px){
-    margin-top: $header-height-desk;
+    // margin-top: $header-height-desk;
     // margin-top: 96px;
   }
 }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+  main,
+  section,
+  li {
+    display: block;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+  }
+  
+  a,
+  button {
+    color: inherit;
+    transition: .3s;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+  }
 
 a,
 img { display: block; }
@@ -88,3 +142,37 @@ img { display: block; }
     transform: translateX(-50%);
   }
 }
+
+  input:not([type="checkbox"]),
+  input:not([type="radio"]),
+  textarea,
+  select,
+  button {
+    appearance: none;
+    -webkit-appearance: textfield;
+  }
+  
+  ::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  :focus {
+    outline: 0;
+  }
+  :selection {
+    background-color: $c-primary;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+  [type="search"]{
+    &::-webkit-search-cancel-button{
+      appearance: none;
+      display: none;
+    }
+  }
+  

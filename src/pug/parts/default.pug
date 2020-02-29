@@ -1,0 +1,24 @@
+block vars
+	- var pageTitle = '';
+	- var bodyClass = '';
+
+doctype html
+html(xmlns="http://www.w3.org/1999/xhtml", xmlns:vtex="http://www.vtex.com.br/2009/vtex-common", xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce", lang="pt-br")
+		head
+				title= " " + pageTitle
+				meta(charset="UTF-8")/
+				meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")/
+				meta(name="format-detection", content="telephone=no")/
+				meta(name="theme-color" content="#000000")/
+				include ./Favicons.pug
+				block head
+
+		body(class= bodyClass)
+				include ./header.pug
+
+				main
+					block content
+
+				include ./footer.pug
+		
+				block scripts

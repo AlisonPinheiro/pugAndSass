@@ -1,0 +1,16 @@
+.button{
+    width: 100%;
+    max-width: 200px;
+    height: 45px;
+    text-align: center;
+    background-color: #3195ff;
+    border-radius: 0.2em;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    color: $c-white;
+    font-weight: 600;
+    &:hover{
+        transform: scale(0.98);
+        background-color: #1888ff;
+    }
+}

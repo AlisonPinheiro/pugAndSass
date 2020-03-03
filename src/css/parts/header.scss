@@ -35,7 +35,7 @@ nav{
     background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(150deg, #0a5dd3, #24a7ff);
     background-image: -o-linear-gradient(150deg, #0a5dd3, #24a7ff);
-    background-image: linear-gradient(150deg, #0a5dd3, #24a7ff);
+    background-image: $c-gradient;
     -webkit-transform-origin: top left;
     -moz-transform-origin: top left;
     -ms-transform-origin: top left;

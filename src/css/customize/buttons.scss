@@ -3,7 +3,7 @@
     max-width: 200px;
     height: 45px;
     text-align: center;
-    background-color: #3195ff;
+    background-color: #fb7e32;
     border-radius: 0.2em;
     transform: scale(1);
     transition: all 0.3s ease;
@@ -11,6 +11,16 @@
     font-weight: 600;
     &:hover{
         transform: scale(0.98);
-        background-color: #1888ff;
+        background-color: #fb7e32e0;
+    }
+    &--secondary{
+        background-color: transparent;
+        border: 1px solid $c-white;
+        color: $c-white;
+        &:hover{
+            background-color: $c-white;
+            border: 1px solid $c-white;
+            color: $c-blue;
+        }
     }
 }

@@ -4,13 +4,16 @@ $f-primary: 'Montserrat', sans-serif ;
 
 $f-size: 14px;
 
-$c-orange: #ff8034;
+$c-orange: #fb7e32;
 $c-white: #fff;
 $c-black: #2F3C52;
 $c-red: #ff1213;
 $c-gray:#7D8EA8;
 $c-gray-light:#D9E3F2;
 $c-blue:#24a7ff;
+$c-green:#84ebad;
+
+$c-gradient: linear-gradient(150deg, #0a5dd3, #24a7ff);
 
 $c-primary: $c-black  ;
 $c-secondary: $c-blue ;
@@ -18,6 +21,7 @@ $c-secondary: $c-blue ;
 $s-sm: 10px;
 $s-md: 20px;
 $s-lg: 30px;
+$s-hg: 50px;
 
 $header-height-mobile: 64px;
 $header-height-desk: 116px;
